@@ -9,7 +9,7 @@ require 'rails_helper'
 
 feature "visitors can add reviews for restaurants" do
   scenario "adds a review for a restaurant successfully" do
-    dumpling_king = Restaurant.create(name: 'Dumpling King', address: '33 Harrison Ave', city: 'Boston', state: 'MA', zip: '02111', description: "Straightforward dumplings for a great price.")
+    dumpling_king = Restaurant.create(name: 'Dumpling King', address: '33 Harrison Ave', city: 'Boston', state: 'MA', zip: 02111, description: "Straightforward dumplings for a great price.")
 
     visit restaurant_path(dumpling_king)
 
@@ -28,7 +28,7 @@ feature "visitors can add reviews for restaurants" do
   end
 
   scenario "adds a review for a restaurant unsuccessfully" do
-    dumpling_king = Restaurant.create(name: 'Dumpling King', address: '33 Harrison Ave', city: 'Boston', state: 'MA', zip: '02111', description: "Straightforward dumplings for a great price.")
+    dumpling_king = Restaurant.create(name: 'Dumpling King', address: '33 Harrison Ave', city: 'Boston', state: 'MA', zip: 02111, description: "Straightforward dumplings for a great price.")
 
     visit restaurant_path(dumpling_king)
 

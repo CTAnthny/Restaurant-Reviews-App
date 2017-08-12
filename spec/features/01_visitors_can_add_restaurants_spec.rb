@@ -16,7 +16,7 @@ feature "visitors can add restaurants" do
     fill_in 'Address', with: "105 Beach St"
     fill_in 'City', with: "Boston"
     fill_in 'State', with: "Massachusetts"
-    fill_in 'Zip', with: "02111"
+    fill_in 'Zip', with: 02111
     fill_in 'Description', with: "This old-school-style Italian deli serves breakfast fare & a range of sandwiches, roll-ups & salads."
 
     click_button "Add Restaurant"
