@@ -6,8 +6,8 @@ require 'rails_helper'
 
 feature "visitor sees a list of restaurants" do
   scenario "sees a list of restaurants and link for new restaurant" do
-    dumpling_king = Restaurant.create(name: 'Dumpling King', address: '33 Harrison Ave', city: 'Boston', state: 'MA', zip: 02111)
-    rock_bottom = Restaurant.create(name: "Rock Bottom", address: "Beach streer", city: "Boston", state: "MA", zip: 02112)
+    dumpling_king = Restaurant.create(name: 'Dumpling King', address: '33 Harrison Ave', city: 'Boston', state: 'MA', zip: '02111')
+    rock_bottom = Restaurant.create(name: "Rock Bottom", address: "Beach streer", city: "Boston", state: "MA", zip: '02112')
 
     visit restaurants_path
 
@@ -19,7 +19,7 @@ feature "visitor sees a list of restaurants" do
     expect(page).to have_content "New Restaurant Form"
   end
   scenario "clicks link and is taken to show page for given restaurant" do
-    dumpling_king = Restaurant.create(name: 'Dumpling King', address: '33 Harrison Ave', city: 'Boston', state: 'MA', zip: 02111, description: "Straightforward dumplings for a great price.")
+    dumpling_king = Restaurant.create(name: 'Dumpling King', address: '33 Harrison Ave', city: 'Boston', state: 'MA', zip: '02111', description: "Straightforward dumplings for a great price.")
 
     visit root_path
 

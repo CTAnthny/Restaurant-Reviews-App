@@ -8,7 +8,7 @@ require 'rails_helper'
 
 feature "visitor sees list of reviews on restaurant page" do
   scenario "sees reviews for specific restaurant" do
-    dumpling_king = Restaurant.create(name: 'Dumpling King', address: '33 Harrison Ave', city: 'Boston', state: 'MA', zip: 02111)
+    dumpling_king = Restaurant.create(name: 'Dumpling King', address: '33 Harrison Ave', city: 'Boston', state: 'MA', zip: '02111')
     review_for_dumplings = Review.create(rating: 4, body: "The pork and leek is my favorite as I think it's a bit juicier than the other options", restaurant: dumpling_king)
 
     visit restaurant_path(dumpling_king)
@@ -20,8 +20,8 @@ feature "visitor sees list of reviews on restaurant page" do
   end
 
   scenario "does not see other reviews for other restaurants" do
-    dumpling_king = Restaurant.create(name: 'Dumpling King', address: '33 Harrison Ave', city: 'Boston', state: 'MA', zip: 02111)
-    rock_bottom = Restaurant.create(name: "Rock Bottom", address: "Beach streer", city: "Boston", state: "MA", zip: 02112)
+    dumpling_king = Restaurant.create(name: 'Dumpling King', address: '33 Harrison Ave', city: 'Boston', state: 'MA', zip: '02111')
+    rock_bottom = Restaurant.create(name: "Rock Bottom", address: "Beach streer", city: "Boston", state: "MA", zip: '02112')
     review_for_dumplings = Review.create(rating: 4, body: "The pork and leek is my favorite as I think it's a bit juicier than the other options", restaurant: dumpling_king)
     review_for_rock = Review.create(rating: 5, body: "Get the nachos!", restaurant: rock_bottom)
 

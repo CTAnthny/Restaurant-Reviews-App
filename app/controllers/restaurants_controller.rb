@@ -14,7 +14,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new(restaurant_params)
 
     if @restaurant.save
-      flash[:success] = 'Your restaurant has been successfully submitted!'
+      flash[:success] = 'Restaurant added successfully!'
       redirect_to @restaurant
     else
       render 'new'
@@ -24,6 +24,6 @@ class RestaurantsController < ApplicationController
   private
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :address, :city, :state, :zip)
+    params.require(:restaurant).permit(:name, :address, :city, :state, :zip, :description)
   end
 end
