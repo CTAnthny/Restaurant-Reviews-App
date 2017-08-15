@@ -24,9 +24,16 @@
   <p><%= @restaurant.description %></p>
 </div>
 
+<div class="addReview">
+  <h2>Add Review</h2>
+  <%= render "reviews/form" %>
+</div>
+
 <div class="row">
   <div class="reviews">
     <h2>Reviews</h2>
     <%= render partial: @review, collection: @reviews %>
   </div>
 </div>
+
+<%= link_to 'All Restaurants', restaurants_path %>
