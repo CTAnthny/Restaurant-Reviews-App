@@ -19,3 +19,14 @@
 <div class="row">
   <p><%= @restaurant.zip %></p>
 </div>
+
+<div class="row">
+  <p><%= @restaurant.description %></p>
+</div>
+
+<div class="row">
+  <div class="reviews">
+    <h2>Reviews</h2>
+    <%= render partial: @review, collection: @reviews %>
+  </div>
+</div>

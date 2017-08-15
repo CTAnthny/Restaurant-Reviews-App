@@ -35,6 +35,6 @@ feature "visitors can add restaurants" do
     expect(page).to have_content "City can't be blank"
     expect(page).to have_content "State can't be blank"
     expect(page).to have_content "Zip can't be blank"
-    expect(page).to have_content "Zip is not a number"
+    expect(page).to have_content "Zip is not a valid US zipcode"
   end
 end

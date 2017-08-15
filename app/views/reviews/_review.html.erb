@@ -1,0 +1,8 @@
+<% unless review.nil? %>
+  <div class="row">
+    <p class="rating">Rating: <%= review.rating %> </p>
+  </div>
+  <div class="row">
+    <p class="body"><%= review.body %></p>
+  </div>
+<% end %>
