@@ -31,7 +31,6 @@ feature "visitor sees list of reviews on restaurant page" do
     expect(page).to have_content review_for_rock.body
 
     expect(page).not_to have_content dumpling_king.name
-    expect(page).not_to have_content review_for_dumplings.rating
     expect(page).not_to have_content review_for_dumplings.body
   end
 end

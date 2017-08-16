@@ -24,11 +24,6 @@
   <p><%= @restaurant.description %></p>
 </div>
 
-<div class="addReview">
-  <h2>Add Review</h2>
-  <%= render "reviews/form" %>
-</div>
-
 <div class="row">
   <div class="reviews">
     <h2>Reviews</h2>
@@ -36,4 +31,9 @@
   </div>
 </div>
 
-<%= link_to 'All Restaurants', restaurants_path %>
+<div class="row">
+  <div class="fLinks">
+    <%= link_to 'Add a Review', new_restaurant_review_path(@restaurant) %></br>
+    <%= link_to 'All Restaurants', restaurants_path %>
+  </div>
+</div>

@@ -1,8 +1,9 @@
-<%= render 'shared/error_messages', object: @restaurant %>
-<%= render 'shared/error_messages', object: @review %>
+
 
 <%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= render 'shared/error_messages', object: @restaurant %>
+  <%= render 'shared/error_messages', object: @review %>
   <%= f.input :rating, collection: 1..5 %>
-  <%= f.input :body, label: 'Description', required: true, autofocus: true %>
-  <%= f.button :submit, "Review Restaurant" %>
+  <%= f.input :body, label: 'Review', required: true, autofocus: true %>
+  <%= f.button :submit, "Add Review" %>
 <% end %>

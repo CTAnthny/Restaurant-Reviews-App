@@ -17,7 +17,7 @@ feature "visitors can add reviews for restaurants" do
 
     expect(page).to have_content "Review Form for Dumpling King"
 
-    fill_in "Rating", with: 5
+    select 5, from: 'Rating'
     fill_in "Review", with: "This is a raving review!"
     click_button "Add Review"
 
@@ -35,11 +35,9 @@ feature "visitors can add reviews for restaurants" do
     click_link "Add a Review"
     expect(page).to have_content "Review Form for Dumpling King"
 
-    fill_in "Rating", with: 8
-
     click_button "Add Review"
 
-    expect(page).to have_content "Body can't be blank"
-    expect(page).to have_content "Rating must be between 1 - 5"
+    expect(page).to have_content "Review can't be blank"
+    expect(page).to have_content "Rating can't be blank"
   end
 end

@@ -3,9 +3,9 @@
     <p class="rating">Rating: <%= review.rating %> </p>
   </div>
   <div class="row">
-    <p class="body"><%= review.body %></p>
+    <p class="body">Review: <%= review.body %></p>
   </div>
   <div class="row">
-    <p class="crTime"><%= review.created_at.strftime("%B %d %Y") %></p>
+    <p class="crTime">Reviewed On: <%= review.created_at.strftime("%B %d %Y") %></p>
   </div>
 <% end %>

@@ -1,13 +1,18 @@
 class ReviewsController < ApplicationController
+  def new
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @review = Review.new
+  end
+
   def create
     @restaurant = Restaurant.find(params[:restaurant_id])
     @review = @restaurant.reviews.build(review_params)
 
     if @review.save
-      flash[:notice] = "Your review was successfully posted!"
+      flash[:success] = "Review added successfully"
       redirect_to @restaurant
     else
-      render "restaurants/show"
+      render 'new'
     end
   end
 
