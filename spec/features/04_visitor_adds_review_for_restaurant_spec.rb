@@ -37,7 +37,7 @@ feature "visitors can add reviews for restaurants" do
 
     click_button "Add Review"
 
-    expect(page).to have_content "Review can't be blank"
+    expect(page).to have_content "Body can't be blank"
     expect(page).to have_content "Rating can't be blank"
   end
 end
