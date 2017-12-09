@@ -27,3 +27,5 @@ group :development do
   gem 'spring'
   gem 'guard-livereload', '~> 2.5', require: false
 end
+
+ruby '2.4.2'
